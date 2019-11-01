@@ -5,30 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/style.css">
     <title>GifTastic</title>
 </head>
 <body>
+    <div class="container">
+        <h1>Search Giphy</h1>
 
-<div class="section">
-    <h1>let's Get some fun GIF</h1>
+    <!-- rendered button dumped here -->
+    <div id="button-View"></div>
 
-    <form id='form'>
-        <input type="input place" id="search" placeholder="Search fun animal here">
-
-        <button type="Search button" id = 'searchBTN'>Search GIF</button>   
+    <form id="giphy-form">
+        <input type="text" id="giphy-Input" placeholder="Type some fun animal here">
+        <!-- button triggers to NEW GIPHY ADD -->
+        <input id="add-Giphy" type="submit" value="Search GIF">
     </form>
+
+    <!-- movie will get dumped here -->
+    <div id="giphy-View"></div>
+
     
-    <div id="container"></div>
-
-</div>
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.js" 
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
