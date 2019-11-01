@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-var giphies = ['Mr. Joker', 'Mr.Bean', 'Mr.JimCerry'];
+var giphies = ['Mr. Joker', 'Mr.Bean', 'Mr.Sponge Bob'];
     // console.log(giphies);
 
 
