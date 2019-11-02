@@ -58,15 +58,11 @@ var giphies = ['Mr. Joker', 'Mr.Bean', 'Mr.Sponge Bob'];
 
         console.log(response);
 
-        // console.log(response.data[0].rating);
+        for(var i = 0; i < 20; i++){
 
-        // console.log(response.data[0].title);
+        var url = response.data[i].images.fixed_height.url
 
-        // var rating = response.data[0].rating
-        // var images = response.data[0].images.fixed_height
-        var url = response.data[0].images.fixed_height.url
-
-        console.log(response.data[0].images.fixed_height.url);
+        console.log(response.data[i].images.fixed_height.url);
         // $(this).html(response.data[0].images.fixed_height.url);
         // $('#giphy-View').append(url); 
 
@@ -75,9 +71,8 @@ var giphies = ['Mr. Joker', 'Mr.Bean', 'Mr.Sponge Bob'];
         imgUrl.attr('alt', 'giphies image');
         $('#giphy-View').append(imgUrl);
 
-
+        }
     });
-
 });
 
 });
