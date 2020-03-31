@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,40 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Cute+Font|Happy+Monkey|Permanent+Marker|Roboto|Rouge+Script|Turret+Road|Vibes|Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Cute+Font|Happy+Monkey|Permanent+Marker|Roboto|Rouge+Script|Turret+Road|Vibes|Waiting+for+the+Sunrise&display=swap"
+        rel="stylesheet">
     <title>GifTastic</title>
 </head>
+
 <body>
+    <!-- main container for giphy app -->
     <div class="main">
 
+        <!-- header title -->
         <div class="container">
             <h1>Search Giphy</h1>
         </div>
 
-        
+        <!-- search input-form -->
         <form id="giphy-form">
-                <input type="text" id="giphy-Input" placeholder="Type anything here">
-                <!-- button triggers to NEW GIPHY ADD -->
-                <input id="add-Giphy" type="submit" value="Search GIF">
+            <input type="text" id="giphy-Input" placeholder="Type anything here">
+            <!-- button triggers to NEW GIPHY ADD -->
+            <input id="add-btn" type="submit" value="Search GIF">
         </form>
 
-        <!-- rendered button dumped here -->
-        <div id="button-View"></div>
-
-        <!-- movie will get dumped here -->
-        <div id="giphy-View"></div>
+        <!-- rendering button show-up container-->
+        <div id="button-container"></div>
+        <!-- rendering giphies show-up container -->
+        <div id="giphy-container"></div>
 
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.js" 
-            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-            crossorigin="anonymous"></script>
-
+    
+    <!-- jQuery CDN link here -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- JS file import here -->
     <script src="js/app.js"></script>
 </body>
+
 </html>

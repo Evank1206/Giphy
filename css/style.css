@@ -2,17 +2,14 @@
     margin: 0px;
 }
 .main{
-    margin: 70px auto;
-     min-height: 80vh;
-    width: 80%;
+    margin: 0 auto;
+    min-height: 80vh;
+    min-width: 80%;
     background-image: url(../img/morocco-blue.png);
 }
-
-
 .container, form, button{
     margin: 10px;
 }
-
 .container h1{
     text-align: center;
     font-family: 'Permanent Marker', cursive;
@@ -23,21 +20,25 @@
     text-align: center;
     /* font-size: 60px; */
 }
-
-#giphy-Input, #add-Giphy{
+#giphy-Input, #add-btn{
     font-size: 20px;
 }
-#button-View{
+#button-container{
     text-align: center;
-    border:solid black;
+    /* border:solid black; */
 }
-
 .btn{
     border: solid red;
+    border-radius: 20%;
 }
 img{
     margin: 20px;
     border: solid green;
     left: 99px;
     position: relative;
+}
+#giphy-container{
+    /* position: relative;
+    text-align: center; */
+    background-color: brown;
 }
