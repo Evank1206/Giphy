@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     var giphies = [];
+    var page = 0;
 
     function renderButtons() {
 
@@ -15,7 +16,6 @@ $(document).ready(function () {
     // This function handles events where one button is clicked
     $('#add-btn').on('click', function (event) {
         event.preventDefault();
-
         var giphy = $('#giphy-Input').val();
 
         $('#button-container').append('<button class="btn">' + giphy + '</button>');
@@ -28,24 +28,25 @@ $(document).ready(function () {
     // });
     // дээрх жишжээ болон дараах жишээ 2 адил
 
-    $(document).on('click', '.btn', function () {
+    function getStuff() {
 
         /*grabing user input data */
         var btnName = $(this).text(); //or .val()
         // console.log(btnName)
+        page++;
 
         const api_key = 'QZDK12gEoyQSqJjGcUf0zhRnzG6Mqgaw';
 
-        const queryURL = "http://api.giphy.com/v1/gifs/search?q=" + btnName + "&api_key=" + api_key + "&limit=21";
+        const queryURL = "http://api.giphy.com/v1/gifs/search?q=" + btnName + "&api_key=" + api_key + "&limit=10";
 
         $.ajax({
             type: 'GET',
-            url: queryURL
+            url: queryURL + '&offset=' + page*10
         }).then(function (response) {
 
-            // console.log(response);
+            console.log(response);
 
-            for (var i = 0; i < 21; i++) {
+            for (var i = 0; i < 10; i=i+1) {
                 // console.log(response.data[i]);
 
                 var url = response.data[i].images.fixed_height.url
@@ -69,6 +70,11 @@ $(document).ready(function () {
             //     var state = $(this).attr("")
             // })
         });
-    });
+
+    }
+
+
+    $(document).on('click', '.btn', getStuff);
+    $(document).on('click', '#next', getStuff);
 
 });
